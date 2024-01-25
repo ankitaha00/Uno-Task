@@ -1,0 +1,125 @@
+body {
+    background-color: rgb(83, 90, 101);
+}
+
+/* For Calculator Container */
+.calc-container {
+    background-color: rgb(199, 212, 198);
+    width: 250px;
+    height: 340px;
+    border: 1px solid rgb(152, 163, 152);
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 20px rgb(37, 37, 37);
+}
+
+/* For Display Container */
+.display-container {
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+/* For Display Container's Input Box */
+.display-container>input {
+    width: 240px;
+    height: 50px;
+    padding-right: 20px;
+    margin-left: 5px;
+    background-color: rgb(199, 212, 198);
+    border: none;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom: 1px solid rgb(152, 163, 152);
+    text-align: right;
+    color: white;
+}
+
+/* For Button Container */
+.btn-container {
+    background-color: rgb(165, 165, 165);
+    width: 240px;
+    height: auto;
+}
+
+/* For Function Button Container */
+.funBtn-container {
+    float: left;
+    padding-top: 8px;
+    /* background-color: rgb(244, 80, 80);         */
+}
+
+/* For Numeric Button Container */
+.numBtn-container {
+    float: left;
+    height: 222px;
+    width: 180px;
+    padding-top: 5px;
+    /* background-color: rgb(89, 236, 45);        */
+}
+
+/* For Opereation Button Container */
+.opBtn-container {
+    width: 50px;
+    height: 280px;
+    padding-top: 8px;
+    float: right;
+    /* background-color: rgb(222, 162, 50);  */
+}
+
+/* For Function Buttons */
+.btn-func {
+    /* background-color: rgb(221, 221, 221); */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: rgb(170, 170, 170);
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 10px;
+    box-shadow: 1px 1px 10px rgb(136, 136, 136);
+}
+
+/* For Numeric Buttons */
+.btn-num {
+    /* background-color: rgb(221, 221, 221); */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border: none;
+    color: rgb(170, 170, 170);
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 1px 1px 10px rgb(136, 136, 136);
+}
+
+/* For Operation Buttons */
+.btn-opr {
+    /* background-color: rgb(221, 221, 221); */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: none;
+    color: rgb(170, 170, 170);
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 1px 1px 10px rgb(136, 136, 136);
+}
+
+/* For 0 Button */
+#numBtn_cal-1_0.btn.btn-num {
+    height: 50px;
+    border-radius: 50px;
+    width: 110px;
+    box-shadow: 1px 1px 10px rgb(136, 136, 136);
+}

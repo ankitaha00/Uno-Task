@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Calculator</title>
+    </head>
+  <body>
+    <div class="container col-md-6 mt-5">
+      <h3 class="text-center">Calculator</h3>
+  
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <input type="text" class="form-control" id="first" placeholder="Value 1"/>
+        </div>
+        <div class="form-group col-md-2">
+          <select id="opr" class="form-control">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+        <div class="form-group col-md-5">
+          <input type="text" class="form-control" id="second" placeholder="Value 2"/>
+        </div>
+             
+      </div>
+      
+      <div class="form-group">
+        <input type="text" class="form-control" id="res" placeholder="Result" readonly/>
+      </div>
+      
+      <div class="text-center">
+        <button type="submit" class="btn btn-danger text-center" onclick="cal()">Calculate</button>
+        <button type="reset" class="btn btn-danger text-center" onclick="clr()">Clear</button>
+      </div>
+    
+      <script>
+        function cal() {
+          var a = parseFloat(document.getElementById('first').value);
+              console.log(a);
+          var opr = document.getElementById('opr').value;
+          console.log(opr);
+              var b = parseFloat(document.getElementById('second').value);
+          console.log(b);
+              var result = 0;
+  
+          switch (opr) {
+            case "+":
+              result = a + b;
+              break;
+            case "-":
+              result = a - b;
+              break;
+            case "*":
+              result = a * b;
+              break;
+            case "/":
+              if (b !==0) {
+                result = a / b;
+              } else {
+                alert("Cannot divide by zero!");
+              }
+              break;
+            default:
+              result = 0;
+              break;
+          }
+  
+          document.getElementById('res').value = result;
+          console.log("Result : " + result);
+        }
+        function clr(){
+          var a = document.getElementById('first').value=null;
+          var opr = document.getElementById('opr').value=null;
+          var b = document.getElementById('second').value=null;
+          var res = document.getElementById('res').value=null;
+        }
+      </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>

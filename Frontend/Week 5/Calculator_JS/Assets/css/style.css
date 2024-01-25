@@ -1,0 +1,68 @@
+/* body{
+    background-color: rgb(51, 51, 51); 
+} */
+
+/* For the outter structure */
+#outterContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    /* border: 2px solid rgb(70, 70, 70); 
+    border-radius: 10px; */
+    /* background-color: white; */
+}
+
+/* For Display */
+#displayContainer{
+    width: 230px;
+    height: 50px;
+    background-color: rgb(51, 51, 51);
+    color: rgb(205, 204, 204);
+    border: none; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: right;
+}
+
+/* input{
+    color: aqua;
+} */
+
+/* For Button */
+#buttonContainer {
+    background-color: rgb(51, 51, 51);
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 5px; */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+  
+.calculator-btn {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    border: none; 
+    background-color: rgb(241, 210, 84); 
+    color: white; 
+    font-size: 18px; 
+    cursor: pointer; 
+    font-family: 'Orbitron', sans-serif; 
+} 
+  
+.calculator-btn:hover {
+    background-color: rgb(70, 70, 70); 
+}
+
+
