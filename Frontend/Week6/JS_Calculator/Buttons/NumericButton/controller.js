@@ -6,6 +6,8 @@ var NumericButton = function (id, options) {
     console.log("Loading NumericController");
 
     this.init = function (id, options) {
+        console.log('Inside init of Numeric Button Controller');
+
         this.model = new NumericButtonModel();
         this.view = new NumericButtonView(id, this.model, options);
     }

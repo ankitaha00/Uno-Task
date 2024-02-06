@@ -6,6 +6,8 @@ var FunctionButtonView = function (id, model, options) {
    console.log("Loading FunctionButtonView");
 
    this.init = function (id, model, options) {
+      console.log('Inside init of Function Button View');
+
       this.model = model;
       this.setWidget();
    }

@@ -19,7 +19,7 @@
 
 /* @return */
             this.getDisplayValue = function(){
-                // console.log('Inside getDisplayValue')
+                console.log('this is current display value'+this.widgetElement.value)
                 return this.widgetElement.value;
             }
 

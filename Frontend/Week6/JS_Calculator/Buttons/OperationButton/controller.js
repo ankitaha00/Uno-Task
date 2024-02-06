@@ -6,6 +6,8 @@ var OperationButton = function(id, options){
     console.log("Loading OperationController");
 
     this.init = function(id, options){
+        console.log('Inside init of Operation Button Controller');
+
         this.model = new OperationButtonModel();
         this.view = new OperationButtonView(id, this.model, options);
     }

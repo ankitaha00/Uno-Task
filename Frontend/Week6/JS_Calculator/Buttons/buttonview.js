@@ -1,9 +1,7 @@
-/*  @param {'fnBtn_' + this.id + '_' + fnBtns[i]} id   in case of functional buttons
- @param {{ title: fnBtns[i], value: fnBtns[i] ,className: "btn btn-danger function" }} options  in case of functional buttons
- */
-
 var ButtonView = function (id, model, options) {
    this._init = function (id, model, options) {
+      console.log('Inside _init of Button View');
+
       this.id = id;
       this.options = options;
       this.widgetElement = null;
@@ -13,14 +11,13 @@ var ButtonView = function (id, model, options) {
 
    /* creation functional button in html */
    this._setWidget = function () {
-
+      
       this.widgetElement = document.createElement('button');                           //creating button element
       this.widgetElement.innerHTML = this.options.title;                               //setting inner html
       this.widgetElement.setAttribute('id', this.id);                                  //setting id
       this.widgetElement.setAttribute('class', this.options.className);                //setting class
    }
 
-   /*  */
    this.distroy = function () {
 
    }
@@ -34,5 +31,6 @@ var ButtonView = function (id, model, options) {
 }
 
 ButtonView.prototype.init = function (id, model, options) {
+   console.log('Inside prototype init of Button View');
    console.log('Inside buttonview', id, model, options)
 }

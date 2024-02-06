@@ -6,6 +6,8 @@ var FunctionButton = function (id, options) {
     console.log("Loading FunctionController");
 
     this.init = function (id, options) {
+        console.log('Inside init of Function Button Controller');
+
         this.model = new FunctionButtonModel();
         this.view = new FunctionButtonView(id, this.model, options);
     }

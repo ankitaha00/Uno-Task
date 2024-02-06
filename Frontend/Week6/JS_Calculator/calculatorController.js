@@ -39,7 +39,7 @@ function Calculator(id, elementId, options) {
         /* Display */
         this.display = new Display('display_' + this.id, { className: 'display_class' });
         this.displayElement = this.display.getWidget();                              //get widget of display (input element) from display controller
-        console.log('Inside Calculator controller.s setWidget', this.displayElement)
+        // console.log('Inside Calculator controller.s setWidget', this.displayElement)
         this.view.setDisplay(this.displayElement);
         // this.display.setDiplay(0);
 
@@ -55,7 +55,7 @@ function Calculator(id, elementId, options) {
             var opt = {
                 title: funcBtns[i],
                 value: funcBtns[i],
-                className: "btn btn-func"
+                className: "btn-func"
             }
 
             var funcbtn = new FunctionButton('funcBtn_' + this.id + '_' + funcBtns[i], opt);
@@ -82,7 +82,7 @@ function Calculator(id, elementId, options) {
             var opt = {
                 title: numBtns[i],
                 value: numBtns[i],
-                className: "btn btn-num",
+                className: "btn-num",
             }
 
             var numbtn = new NumericButton('numBtn_' + this.id + '_' + numBtns[i], opt);
@@ -109,7 +109,7 @@ function Calculator(id, elementId, options) {
             var opt = {
                 title: oprBtns[i],
                 value: oprBtns[i],
-                className: "btn btn-opr"
+                className: "btn-opr"
             }
 
             var oprbtn = new OperationButton('oprBtn_' + this.id + '_' + oprBtns[i], opt);
@@ -131,15 +131,12 @@ function Calculator(id, elementId, options) {
             console.log(key);
             var displayContent = this.display.getDisplayValue();
             if (key === 'AC') {
-                console.log('AC Pressed')
                 this.display.setDisplay(0);
             }
             else if (key === '+/-') {
-                console.log('+/- Pressed')
                 this.display.setDisplay(-(displayContent));
             }
             else if (key === 'C') {
-                console.log('C Pressed')
                 this.display.setDisplay(displayContent.slice(0, -1));
             }
         }
@@ -150,49 +147,10 @@ function Calculator(id, elementId, options) {
         this.numericBtnsClickHandler = function (key) {
             console.log(key);
             var displayContent = this.display.getDisplayValue();
-            if (key === '1') {
-                console.log('1 Pressed')
-                this.display.setDisplay(displayContent += 1);
-            }
-            else if (key === '2') {
-                console.log('2 Pressed')
-                this.display.setDisplay(displayContent += 2);
-            }
-            else if (key === '3') {
-                console.log('3 Pressed')
-                this.display.setDisplay(displayContent += 3);
-            }
-            else if (key === '4') {
-                console.log('4 Pressed')
-                this.display.setDisplay(displayContent += 4);
-            }
-            else if (key === '5') {
-                console.log('5 Pressed')
-                this.display.setDisplay(displayContent += 5);
-            }
-            else if (key === '6') {
-                console.log('6 Pressed')
-                this.display.setDisplay(displayContent += 6);
-            }
-            else if (key === '7') {
-                console.log('7 Pressed')
-                this.display.setDisplay(displayContent += 7);
-            }
-            else if (key === '8') {
-                console.log('8 Pressed')
-                this.display.setDisplay(displayContent += 8);
-            }
-            else if (key === '9') {
-                console.log('9 Pressed')
-                this.display.setDisplay(displayContent += 9);
-            }
-            else if (key === '0') {
-                console.log('0 Pressed')
-                this.display.setDisplay(displayContent += 0);
-            }
-            else if (key === '.') {
-                console.log('. Pressed')
-                this.display.setDisplay(displayContent += ".");
+            if (displayContent.slice(0) == 0) {
+                this.display.setDisplay(key);
+            } else {
+                this.display.setDisplay(displayContent += key);
             }
         }
 
@@ -202,16 +160,15 @@ function Calculator(id, elementId, options) {
         this.operationBtnsClickHandler = function (key) {
             console.log(key);
             var displayContent = this.display.getDisplayValue();
-            if (key === '=') {
-                console.log('= Pressed')
-                this.display.setDisplay(eval(displayContent));
-            }
-            else {
-                this.display.setDisplay(displayContent + key);
-            }
+        if (key == '=') {
+            this.display.setDisplay(eval(displayContent));
         }
-
+        else {
+            this.display.setDisplay(displayContent += key);
+        }
+        }
     }
+    
     this.init(id, elementId, options)
 
 }

@@ -6,6 +6,8 @@ var OperationButtonView = function(id, model, options) {
    console.log("Loading OperationButtonView");
 
    this.init = function(id, model, options){
+      console.log('Inside init of Operation Button View');
+
       this.model = model;
       this.setWidget();     
    }

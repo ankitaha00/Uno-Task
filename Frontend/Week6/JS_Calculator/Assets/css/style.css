@@ -4,15 +4,15 @@ body {
 
 /* For Calculator Container */
 .calc-container {
-    background-color: rgb(199, 212, 198);
+    background-color: rgb(201, 213, 201);
     width: 250px;
     height: 340px;
     border: 1px solid rgb(152, 163, 152);
     border-radius: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;                             /* Change this if you are creating more then one calculator */
+    top: 50%;                                       /* Comment this */
+    left: 50%;                                      /* Comment this */
+    transform: translate(-50%, -50%);               /* Comment this */
     box-shadow: 3px 3px 20px rgb(37, 37, 37);
 }
 
@@ -25,10 +25,11 @@ body {
 
 /* For Display Container's Input Box */
 .display-container>input {
-    width: 240px;
+    width: 230px;
     height: 50px;
-    padding-right: 20px;
-    margin-left: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 9px;
     background-color: rgb(199, 212, 198);
     border: none;
     border-top-right-radius: 30px;
@@ -62,7 +63,7 @@ body {
 }
 
 /* For Opereation Button Container */
-.opBtn-container {
+.oprBtn-container {
     width: 50px;
     height: 280px;
     padding-top: 8px;
@@ -117,7 +118,13 @@ body {
 }
 
 /* For 0 Button */
-#numBtn_cal-1_0.btn.btn-num {
+#numBtn_cal-1_0 {
+    height: 50px;
+    border-radius: 50px;
+    width: 110px;
+    box-shadow: 1px 1px 10px rgb(136, 136, 136);
+}
+#numBtn_cal-2_0 {
     height: 50px;
     border-radius: 50px;
     width: 110px;

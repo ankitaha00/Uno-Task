@@ -17,6 +17,9 @@ function CalculatorView(id, parentElement, options) {
     //setting calculator widget i.e. display container and button container inside calculator container
     this.setCalculatorWidget = function () {
 
+        // var parentElement=document.getElementById(id)
+        
+
         //creating div for calculator container
         this.calculatorWidget = document.createElement('div');
         this.calculatorWidget.className = "calc-container";
@@ -39,7 +42,7 @@ function CalculatorView(id, parentElement, options) {
 
         //creating div for operation button container
         this.operationBtnContainer = document.createElement('div');
-        this.operationBtnContainer.className = "opBtn-container";
+        this.operationBtnContainer.className = "oprBtn-container";
 
         //appending numeric, operation & function buttons to parent button container
         this.btnContainer.appendChild(this.functionBtnContainer);
