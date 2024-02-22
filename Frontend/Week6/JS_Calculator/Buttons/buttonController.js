@@ -18,6 +18,7 @@ function Button(id, options) {
 
   this.setEvent = function () {
     var _this = this;
+    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$', _this)
     this.getWidget().onclick = function (event) {
       _this.onBtnPress(event)
     }

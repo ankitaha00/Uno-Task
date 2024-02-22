@@ -1,0 +1,8 @@
+<div class="num-btn-container">
+
+    <button id="num-btn-{{numericButton.id}}" class="num-btn" value="{{numericButton.value}}"
+        *ngFor="let numericButton of numericButtons" (click)="onBtnPress(numericButton.value)">
+        {{numericButton.name}}
+    </button>
+
+</div>

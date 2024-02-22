@@ -1,0 +1,7 @@
+<div>
+<button mat-fab class="numBtns" 
+*ngFor='let btn of numericButtons;let i = index'class="numBtns{{i}}"
+(click)="onClick(this.btn)">
+    {{ this.btn.value }}
+</button>
+</div>

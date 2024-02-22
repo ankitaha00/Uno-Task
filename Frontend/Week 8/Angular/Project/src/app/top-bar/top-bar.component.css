@@ -1,0 +1,28 @@
+/* For main div */
+.top-bar {
+    width: 350px;
+    height: 55px;
+    background-color: rgb(73, 67, 64);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    /* border: 2px solid red; */            /* Uncomment this if you want to check your component */
+}
+
+/* For anchor div */
+.top-bar-logo {
+    margin-top: 20px;
+}
+
+/* For the anchor */
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+/* For button div */
+.top-bar-button {
+    margin: 10px;
+
+}

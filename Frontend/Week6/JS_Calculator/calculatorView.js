@@ -17,9 +17,6 @@ function CalculatorView(id, parentElement, options) {
     //setting calculator widget i.e. display container and button container inside calculator container
     this.setCalculatorWidget = function () {
 
-        // var parentElement=document.getElementById(id)
-        
-
         //creating div for calculator container
         this.calculatorWidget = document.createElement('div');
         this.calculatorWidget.className = "calc-container";

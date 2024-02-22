@@ -1,0 +1,10 @@
+.calculatorContainer{
+    margin-top:50px;
+    background-color: rgb(95, 81, 81);
+    box-sizing: border-box;
+    width:300px;
+    border: solid #5B6DCD 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

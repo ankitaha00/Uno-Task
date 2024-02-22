@@ -1,0 +1,8 @@
+   <div>
+    <!-- Functional Button -->
+   <button mat-fab color="accent" 
+    *ngFor='let btn of functionalButtons; let i=index ' class="fnBtns{{i}}" 
+    aria-label="functionalButtons" (click)="onClick(btn)">
+    {{ btn }}
+    </button>
+</div>

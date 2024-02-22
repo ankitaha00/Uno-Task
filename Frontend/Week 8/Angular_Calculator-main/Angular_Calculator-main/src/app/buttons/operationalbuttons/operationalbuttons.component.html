@@ -1,0 +1,7 @@
+<div>
+<button mat-fab class="opBtns"  
+*ngFor='let btn of operationalButtons;'
+(click)="onClick(this.btn)">
+    {{ this.btn.symbol }}
+</button>
+</div>

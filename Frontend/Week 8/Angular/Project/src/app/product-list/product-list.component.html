@@ -1,0 +1,14 @@
+<div class="main">
+
+    <div class="products" *ngFor="let product of Products">
+        <a class="label" href="/"> {{product.name}} </a> <br>
+
+        <p class="product-content" *ngIf="product.description">
+            <span> Description : </span> 
+            {{product.description}}
+        </p>
+
+        <button mat-raised-button  type="button" (click)="buy(product)"> Buy </button>
+    </div>
+
+</div>

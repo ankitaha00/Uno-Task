@@ -1,0 +1,33 @@
+<div class="calculator-container">
+    <!-- Display Component -->
+    <div class="display">
+        <app-display [displayText]="displayContent"> </app-display>
+    </div>
+
+    <!-- Button Containers -->
+    <div class="btn-container">
+        <!-- Function Buttons -->
+        <div class="func-btn-container">
+            <!-- Handle Function Button Click -->
+            <button class="func-btn" (click)="handleFunctionButtonClick(funcBtn.sign)" *ngFor="let funcBtn of funcBtns">
+                {{ funcBtn.sign }}
+            </button>
+        </div>
+
+        <!-- Numeric Buttons -->
+        <div class="num-btn-container">
+            <!-- Handle Numeric Button Click -->
+            <button class="num-btn" (click)="handleNumericButtonClick(numBtn.sign)" *ngFor="let numBtn of numBtns">
+                {{ numBtn.sign }}
+            </button>
+        </div>
+
+        <!-- Operation Buttons -->
+        <div class="opr-btn-container">
+            <!-- Handle Operation Button Click -->
+            <button class="opr-btn" (click)="handleOperationButtonClick(oprBtn.sign)" *ngFor="let oprBtn of oprBtns">
+                {{ oprBtn.sign }}
+            </button>
+        </div>
+    </div>
+</div>

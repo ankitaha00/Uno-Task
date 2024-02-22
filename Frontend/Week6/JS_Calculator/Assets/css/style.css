@@ -9,10 +9,10 @@ body {
     height: 340px;
     border: 1px solid rgb(152, 163, 152);
     border-radius: 30px;
-    position: absolute;                             /* Change this if you are creating more then one calculator */
-    top: 50%;                                       /* Comment this */
-    left: 50%;                                      /* Comment this */
-    transform: translate(-50%, -50%);               /* Comment this */
+    position: absolute;                              /* Change this if you are creating more then one calculator */
+    top: 50%;                                        /*  Comment this */
+    left: 50%;                                       /* Comment this */
+    transform: translate(-50%, -50%);        
     box-shadow: 3px 3px 20px rgb(37, 37, 37);
 }
 

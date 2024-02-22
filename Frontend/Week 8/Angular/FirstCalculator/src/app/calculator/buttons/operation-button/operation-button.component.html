@@ -1,0 +1,8 @@
+<div class="opr-btn-container">
+
+    <button id="opr-btn-{{operationButton.id}}" class="opr-btn" value="{{operationButton.value}}"
+        *ngFor="let operationButton of operationButtons" (click)="onBtnPress(operationButton.value)">
+        {{operationButton.name}}
+    </button>
+
+</div>
